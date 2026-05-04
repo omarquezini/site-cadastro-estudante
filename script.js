@@ -1,18 +1,20 @@
-let form = document.getElementById('cadastroForm');
 
-let lista = document.getElementById('listaAlunos');
+
+let form = document.getElementById('cadastro'); // corrigi o ID do form
+let lista = document.getElementById('listaAluno'); // corrigi o ID da lista
 
 form.addEventListener('submit', function(event){
-    event.preventDefault()
+    event.preventDefault();
 
     const nome = document.getElementById('nomeAluno').value;
-    const idade = document.getElementById('idAluno').value;
-    const imail = document.getElementById('imailAluno').value;
+    const idade = document.getElementById('idadeAluno').value; // ID correto
+    const login = document.getElementById('loginAluno').value; // ID correto
+    const pizza = document.getElementById('pizzaFavorita').value; // ID correto
 
-    const novoIntem = document.createElement('li');
-    novoIntem.innerHTML = `<strong> ${nome} </strong> - ${idade} anos ${imail}`;
+    const novoItem = document.createElement('li');
+    novoItem.innerHTML = `<strong>${nome}</strong> - ${idade} anos - Login: ${login} - Pizza favorita: ${pizza}`;
 
-    lista.appendChild(novoIntem);
+    lista.appendChild(novoItem);
 
     form.reset();
 });
