@@ -10,10 +10,16 @@ form.addEventListener('submit', function(event){
     const idade = document.getElementById('idadeAluno').value; // ID correto
     const login = document.getElementById('loginAluno').value; // ID correto
     const pizza = document.getElementById('pizzaFavorita').value; // ID correto
+    const SN = document.getElementById('SN').value; // ID correto
+
 
     const novoItem = document.createElement('li');
-    novoItem.innerHTML = `<strong>${nome}</strong> - ${idade} anos - Login: ${login} - Pizza favorita: ${pizza}`;
-
+    if (SN === "sim"){
+    novoItem.innerHTML = `<strong>${nome}</strong> - ${idade} anos - Login: ${login} - Pizza favorita: ${pizza} - Resposta: ${SN}, Obrigado`;
+    }
+    else{
+        novoItem.innerHTML = `<strong>${nome}</strong> - ${idade} anos - Login: ${login} - Pizza favorita: ${pizza} - Resposta: ${SN}, Vai pro caralho intão. seu miseravel, ridiculo`;
+    }
     lista.appendChild(novoItem);
 
     form.reset();
