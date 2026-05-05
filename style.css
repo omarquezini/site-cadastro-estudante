@@ -11,7 +11,7 @@ body {
 .container {
     background-color: #ffffff;
     padding: min(5%, 50px); /* padding responsivo */
-    border-radius: min(1em, 8px);
+    border-radius: min(50em, 50px);
     box-shadow: 0px min(2px, 8px) min(10px, 100px) rgb(0, 255, 76);
     width: min(90%, 300px); /* não ultrapassa 300px, mas encolhe em telas pequenas */
 }
